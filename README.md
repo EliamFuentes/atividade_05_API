@@ -1,12 +1,77 @@
-# React + Vite
+### Atividade 5 - Filmes IMDB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação em React + Vite que consome a API do TMDB (ou OMDb), permitindo que usuários busquem filmes, vejam detalhes e montem uma lista de favoritos.
 
-Currently, two official plugins are available:
+## 🚀Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🔎 Página de Busca
 
-## Expanding the ESLint configuration
+Campo para digitar o termo de busca
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Lista de resultados com pôster, título, ano e botão para ver detalhes
+
+# 📑 Paginação
+
+Navegação entre as páginas de resultados
+
+# 🎥 Página de Detalhes
+
+Exibição de informações completas: diretor, elenco, sinopse e avaliação
+
+# ⭐ Lista de Favoritos
+
+Adicionar ou remover filmes da lista
+
+Persistência em localStorage
+
+# ⚡ Tratamento de Erros & Loading
+
+Indicador de carregamento
+
+Mensagens de erro amigáveis
+
+# 🛠️ Tecnologias Utilizadas
+
+React
+ + Vite
+
+React Router
+
+TMDB API
+ ou OMDb API
+
+
+## Como Rodar o Projeto
+
+1. Clone este repositório:
+
+git clone https://github.com/EliamFuentes/atividade_05_API
+
+2. Entre na pasta do projeto:
+
+cd atividade_05_api
+
+
+3. Instale as dependências:
+
+npm install
+
+
+4. Crie um arquivo .env na raiz com sua chave da API:
+
+VITE_API_KEY=sua_chave_aqui
+VITE_API_URL=https://api.themoviedb.org/3
+
+
+4. Rode o projeto:
+
+npm run dev
+
+
+5. Acesse no navegador:
+
+http://localhost:5173/
+
+## 📸 Demonstração
+
+(adicione prints da aplicação aqui quando tiver funcionando)
