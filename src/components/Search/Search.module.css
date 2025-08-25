@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    flex-direction: column;
+}
+
+.searchTitle h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 0.4rem;
+}
+
+.searchTitle p {
+    color: gray;
+    margin-bottom: 0.8rem;
+}
+
+.formSearch {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.containerSearch {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    padding: 5px 10px;
+    flex: 1;
+}
+
+.searchIcon {
+    color: gray;
+    font-size: 1.1rem;
+    margin-right: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.inputSearch {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 0.8rem;
+    color: gray;
+    padding-right: 18.25rem;
+}
+
+.formSearch button {
+    background-color: #007bff;
+    /* azul */
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}

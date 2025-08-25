@@ -1,0 +1,36 @@
+.layout {
+    background-color: var(--background);
+}
+
+header {
+    color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+.logo {
+    display: flex;
+    color: white;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+.favorites {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+}
