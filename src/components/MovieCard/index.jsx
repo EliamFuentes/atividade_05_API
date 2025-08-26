@@ -5,9 +5,9 @@ import { FaStar } from "react-icons/fa";
 
 const imagesURL = import.meta.env.VITE_IMG;
 
-export default function MoviesCard({ movie, showLink = true }) {
+export default function MovieCard({ movie, showLink = true }) {
     return (
-        <div className={styles.container}>
+        <div className={styles.movieCard}>
             <img src={imagesURL + movie.poster_path} alt={movie.title} />
             <h2>{movie.title}</h2>
             <p>

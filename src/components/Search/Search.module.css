@@ -53,8 +53,7 @@
 }
 
 .formSearch button {
-    background-color: #007bff;
-    /* azul */
+    background-color: var(--button);
     color: white;
     border: none;
     border-radius: 0.2rem;

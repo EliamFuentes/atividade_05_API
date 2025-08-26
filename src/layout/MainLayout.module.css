@@ -1,36 +1,41 @@
 .layout {
-    background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header {
-    color: var(--primary);
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid white;
+    border-bottom: 0.1rem solid var(--border);
+    padding: 1rem 6rem;
 }
 
 .logo {
     display: flex;
-    color: white;
+    gap: 0.2rem;
 }
 
-.logo h1 {
-    font-size: 1.6rem;
+.logo h2 {
+    font-weight: bold;
 }
 
 .icon {
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    color: #007bff;
 }
 
 .favorites {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: white;
-    border: 1px solid white;
-    border-radius: 8px;
-    padding: 0.2rem;
+}
+
+.favorites button {
     font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    background-color: transparent;
 }

@@ -7,14 +7,13 @@ import styles from './MainLayout.module.css'
 export default function MainLayout({ children }) {
     return (
         <div className={styles.layout}>
-            <header>
+            <header className={styles.header}>
                 <div className={styles.logo}>
                     <span className={styles.icon}><TbMovie /></span>
                     <Link to="/"><h2>MovieApp</h2></Link>
                 </div>
                 <div className={styles.favorites}>
-                    <MdFavoriteBorder />
-                    <Link to="/favorites"><p>Favoritos</p></Link>
+                    <Link to="/favorites"><button><MdFavoriteBorder />Favoritos</button></Link>
                 </div>
             </header>
 

@@ -1,4 +1,44 @@
-.container {
-    border: 3px solid white;
-    display: grid;
+.movieCard {
+    width: 30%;
+    color: var(--text-primary);
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background-card);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.movieCard img {
+    max-width: 100%;
+}
+
+.movieCard p,
+.movieCard img,
+.movieCard h2 {
+    margin-bottom: 1rem;
+}
+
+.movieCard svg {
+    color: var(--star);
+}
+
+.movieCard a {
+    background-color: var(--button);
+    border: 2px solid var(--button);
+    border-radius: 4px;
+    color: var(--text-primary);
+    padding: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    text-align: center;
+    font-weight: bold;
+}
+
+.movieCard a:hover {
+    background-color: transparent;
 }
