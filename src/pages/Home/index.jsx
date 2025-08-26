@@ -9,12 +9,12 @@ const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 export default function Home() {
-    const [topMovies, setTopMovies] = useState([]);
+    const [recentsMovies, setRecentsMovies] = useState([]);
 
     const getMovies = async (url) => {
         const res = await fetch(url);
         const data = await res.json();
-        setTopMovies(data.results);
+        setRecentsMovies(data.results);
     };
 
     useEffect(() => {
@@ -33,9 +33,9 @@ export default function Home() {
                 <h3>Últimos lançamentos:</h3>
             </div>
             <div className={styles.moviesContainer}>
-                {topMovies.length === 0 && <p>Carregando...</p>}
-                {topMovies.length > 0 &&
-                    topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+                {recentsMovies.length === 0 && <p>Carregando...</p>}
+                {recentsMovies.length > 0 &&
+                    recentsMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
             </div>
         </div>
     )
