@@ -1,0 +1,19 @@
+.title {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.queryText {
+    color: var(--button);
+}
+
+.moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
