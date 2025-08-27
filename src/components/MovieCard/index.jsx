@@ -10,7 +10,9 @@ const imagesURL = import.meta.env.VITE_IMG;
 
 export default function MovieCard({ movie, showLink = true }) {
 
-    const { favorite, addFavorite } = useFavorites()
+    const { favorites, addFavorite } = useFavorites()
+
+    const isFavorite = favorites.some((fav) => fav.id === movie.id)
 
     return (
         <div className={styles.movieCard}>
@@ -21,9 +23,9 @@ export default function MovieCard({ movie, showLink = true }) {
             </p>
             {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
 
-            <button onClick={() => addFavorite({ id })}>
-                {favorite ? <MdFavorite color="red" /> : <MdFavoriteBorder />}
-                {favorite ? " Remover" : " Favoritar"}
+            <button onClick={() => addFavorite(movie)}>
+                {isFavorite ? <MdFavorite color="red" /> : <MdFavoriteBorder />}
+                {isFavorite ? " Remover" : " Favoritar"}
             </button>
         </div>
     )

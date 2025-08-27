@@ -1,26 +1,29 @@
 import { useContext } from "react";
-import { FavoritesContext } from "../context/FavoritesContext";
+import { FavoritesContext } from "../contexts/FavoritesContext";
 
 export function useFavorites() {
-    const { favorite, setFavorite } = useContext(FavoritesContext)
+    const context = useContext(FavoritesContext);
+
+    if (!context) {
+        throw new Error("useFavorites deve ser usado dentro de <FavoritesProvider>");
+    }
+
+    const { favorites, setFavorites } = context;
 
     function addFavorite(newFavorite) {
-
-        const repeatedFavorite = favorite.some((item) => item.id === newFavorite.id)
-
-        let newList = [...favorite]
+        const repeatedFavorite = favorites.some((item) => item.id === newFavorite.id);
 
         if (!repeatedFavorite) {
-            newList.push(newFavorite)
-            return setFavorite(newList)
+            return setFavorites([...favorites, newFavorite]);
         }
 
-        newList = favorite.filter((fav) => fav.id !== newFavorite.id)
-        return setFavorite(newList)
+        // remover se já existe
+        const newList = favorites.filter((fav) => fav.id !== newFavorite.id);
+        return setFavorites(newList);
     }
 
     return {
-        favorite,
+        favorites,
         addFavorite
-    }
+    };
 }
