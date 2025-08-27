@@ -7,7 +7,7 @@
     justify-content: space-between;
     background-color: var(--background-card);
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
         0 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -41,4 +41,26 @@
 
 .movieCard a:hover {
     background-color: transparent;
+}
+
+.movieCard button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+
+    background-color: transparent;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    margin-top: 0.2rem;
+
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.movieCard button svg {
+    font-size: 1.2rem;
 }

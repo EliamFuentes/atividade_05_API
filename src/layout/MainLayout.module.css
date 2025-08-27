@@ -28,14 +28,27 @@
     color: #007bff;
 }
 
-.favorites {
-    display: flex;
-}
-
 .favorites button {
-    font-size: 0.8rem;
     display: flex;
     align-items: center;
-    color: var(--primary);
-    background-color: transparent;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.favorites button svg {
+    color: var(--icon-favorites);
+    font-size: 1.2rem;
+}
+
+.favorites button:hover {
+    transform: scale(1.05);
 }

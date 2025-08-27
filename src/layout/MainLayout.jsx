@@ -1,5 +1,5 @@
 import { TbMovie } from "react-icons/tb";
-import { MdFavoriteBorder } from "react-icons/md";
+import { MdFavorite } from "react-icons/md";
 import { Link } from 'react-router-dom'
 
 import styles from './MainLayout.module.css'
@@ -13,7 +13,7 @@ export default function MainLayout({ children }) {
                     <Link to="/"><h2>MovieApp</h2></Link>
                 </div>
                 <div className={styles.favorites}>
-                    <Link to="/favorites"><button><MdFavoriteBorder />Favoritos</button></Link>
+                    <Link to="/favorites"><button><MdFavorite />Favoritos</button></Link>
                 </div>
             </header>
 
