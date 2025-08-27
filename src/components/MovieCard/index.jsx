@@ -1,22 +1,16 @@
 import styles from './MoviesCard.module.css'
+
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
-import { useFavorites } from '../../context/FavoritesContext';
+
+import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'
+import { useFavorites } from '../../hooks/useFavorites';
 
 const imagesURL = import.meta.env.VITE_IMG;
 
 export default function MovieCard({ movie, showLink = true }) {
-    const { addFavorite, removeFavorite, isFavorite } = useFavorites();
-    const favorite = isFavorite(movie.id);
 
-    const toggleFavorite = () => {
-        if (favorite) {
-            removeFavorite(movie.id);
-        } else {
-            addFavorite(movie);
-        }
-    };
+    const { favorite, addFavorite } = useFavorites()
 
     return (
         <div className={styles.movieCard}>
@@ -27,7 +21,7 @@ export default function MovieCard({ movie, showLink = true }) {
             </p>
             {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
 
-            <button onClick={toggleFavorite}>
+            <button onClick={() => addFavorite({ id })}>
                 {favorite ? <MdFavorite color="red" /> : <MdFavoriteBorder />}
                 {favorite ? " Remover" : " Favoritar"}
             </button>

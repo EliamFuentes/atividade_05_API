@@ -7,7 +7,6 @@ import MovieDetails from '../pages/MovieDetails'
 import FavoritesPage from '../pages/FavoritesPage'
 import Search from '../pages/SearchPage'
 
-
 export default function AppRoutes() {
     return (
         <MainLayout>
