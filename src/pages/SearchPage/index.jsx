@@ -36,7 +36,7 @@ export default function SearchPage() {
                 <h3>Resultados para: <span className={styles.queryText}>{query}</span></h3>
             </div>
             <div className={styles.moviesContainer}>
-                {movies.length === 0 && <p>Carregando...</p>}
+                {movies.length === 0 && <p>Nenhum filme encontrado</p>}
                 {movies.length > 0 &&
                     movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
             </div>

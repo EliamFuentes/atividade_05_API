@@ -22,14 +22,18 @@ export default function MovieDetails() {
                 setError(null)
 
                 const movieRes = await fetch(`${moviesURL}${id}?${apiKey}&language=pt-BR`)
+
                 if (!movieRes.ok) throw new Error('Erro ao buscar detalhes do filme.')
+
                 const movieData = await movieRes.json()
 
                 const creditsRes = await fetch(`${moviesURL}${id}/credits?${apiKey}&language=pt-BR`)
+
                 if (!creditsRes.ok) throw new Error('Erro ao buscar créditos do filme.')
                 const creditsData = await creditsRes.json()
 
                 const director = creditsData.crew.find(member => member.job === "Director")
+
                 const cast = creditsData.cast.slice(0, 5)
 
                 setMovie({
@@ -56,23 +60,25 @@ export default function MovieDetails() {
             <div className={styles.movieSearch}>
                 <Search />
             </div>
-            {movie && <>
-                <MovieCard movie={movie} showLink={false} />
+            {movie &&
+                <>
+                    <div className={styles.movieCard}>
+                        <MovieCard movie={movie} showLink={false} />
+                    </div>
+                    <div className={styles.info}>
+                        <h3>Sinopse:</h3>
+                        <p>{movie.overview}</p>
 
-                <div className={styles.info}>
-                    <h3>Sinopse:</h3>
-                    <p>{movie.overview}</p>
+                        <h3>Diretor:</h3>
+                        <p>{movie.director}</p>
+                        <h3>Elenco:</h3>
 
-                    <h3>Diretor:</h3>
-                    <p>{movie.director}</p>
+                        <p>{movie.cast?.length > 0 ? movie.cast.join(', ') : "Não informado"}</p>
+                        <h3>Duração:</h3>
 
-                    <h3>Elenco:</h3>
-                    <p>{movie.cast?.length > 0 ? movie.cast.join(', ') : "Não informado"}</p>
-
-                    <h3>Duração:</h3>
-                    <p>{movie.runtime} minutos</p>
-                </div>
-            </>}
+                        <p>{movie.runtime} minutos</p>
+                    </div> </>}
         </div>
+
     )
 }

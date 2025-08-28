@@ -1,4 +1,4 @@
-import styles from './MoviesCard.module.css'
+import styles from './MovieCard.module.css'
 
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
@@ -21,12 +21,14 @@ export default function MovieCard({ movie, showLink = true }) {
             <p>
                 <FaStar /> {movie.vote_average.toFixed(1)}
             </p>
-            {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
+            <div className={styles.actions}>
+                {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
 
-            <button onClick={() => addFavorite(movie)}>
-                {isFavorite ? <MdFavorite color="red" /> : <MdFavoriteBorder />}
-                {isFavorite ? " Remover" : " Favoritar"}
-            </button>
+                <button onClick={() => addFavorite(movie)}>
+                    {isFavorite ? <MdFavorite color="red" /> : <MdFavoriteBorder />}
+                    {isFavorite ? " Remover" : " Favoritar"}
+                </button>
+            </div>
         </div>
     )
 }

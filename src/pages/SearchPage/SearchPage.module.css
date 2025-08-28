@@ -12,8 +12,13 @@
 .moviesContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem;
+    gap: 1rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.moviesContainer>* {
+    flex: 1 1 calc(25% - 1rem);
+    max-width: 300px;
 }

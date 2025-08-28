@@ -6,6 +6,7 @@ import styles from './Search.module.css'
 
 export default function Search() {
     const [search, setSearch] = useState("")
+    const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
@@ -13,8 +14,13 @@ export default function Search() {
 
         if (!search) return
 
-        navigate(`/search?q=${search}`)
-        setSearch("")
+        setIsLoading(true)
+
+        setTimeout(() => {
+            navigate(`/search?q=${search}`)
+            setSearch("")
+            setIsLoading(false)
+        }, 300)
     }
 
     return (
@@ -33,10 +39,11 @@ export default function Search() {
                         onChange={(e) => setSearch(e.target.value)}
                         value={search}
                         className={styles.inputSearch}
+                        disabled={isLoading}
                     />
                 </div>
-                <button type="submit" className={styles.buttonSearch}>
-                    Buscar
+                <button type="submit" className={styles.buttonSearch} disabled={isLoading}>
+                    {isLoading ? "Carregando..." : "Buscar"}
                 </button>
             </form>
         </div>

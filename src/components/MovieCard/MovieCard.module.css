@@ -1,15 +1,20 @@
 .movieCard {
-    width: 30%;
     color: var(--text-primary);
     margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: var(--background-card);
     padding: 1rem;
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
         0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .movieCard img {

@@ -10,6 +10,7 @@
     align-items: center;
     border-bottom: 0.1rem solid var(--border);
     padding: 1rem 6rem;
+    width: 100%;
 }
 
 .logo {
@@ -51,4 +52,58 @@
 
 .favorites button:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 1rem 3rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+}
+
+/* Smartphones / telas pequenas */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        border: none;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+
+    .favorites button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        font-size: 1.8rem;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 480px) {
+    .header {
+        padding: 0.8rem 1rem;
+    }
+
+    .logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .favorites button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
 }

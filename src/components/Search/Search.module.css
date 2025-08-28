@@ -4,6 +4,8 @@
     align-items: center;
     margin-top: 1rem;
     flex-direction: column;
+    padding: 0 1rem;
+    /* evita que o conteúdo encoste na borda da tela */
 }
 
 .searchTitle h1 {
@@ -11,19 +13,29 @@
     justify-content: center;
     color: white;
     margin-bottom: 0.4rem;
+    text-align: center;
+    /* para telas pequenas */
 }
 
 .searchTitle p {
     color: gray;
     margin-bottom: 0.8rem;
+    text-align: center;
 }
 
+/* Formulário */
 .formSearch {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.5rem;
     align-items: center;
+    width: 100%;
+    max-width: 600px;
+    /* limita o tamanho em desktops */
+    flex-wrap: wrap;
+    /* permite quebrar em linhas menores */
 }
 
+/* Container do input */
 .containerSearch {
     display: flex;
     align-items: center;
@@ -32,12 +44,14 @@
     border-radius: 0.2rem;
     padding: 5px 10px;
     flex: 1;
+    min-width: 0;
+    /* importante para flex-wrap */
 }
 
 .searchIcon {
     color: gray;
     font-size: 1.1rem;
-    margin-right: 0.8rem;
+    margin-right: 0.5rem;
     display: flex;
     align-items: center;
 }
@@ -47,11 +61,15 @@
     outline: none;
     background: transparent;
     flex: 1;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: gray;
-    padding-right: 18.25rem;
+    padding-right: 0;
+    /* remove valor fixo */
+    min-width: 0;
+    /* evita overflow em telas pequenas */
 }
 
+/* Botão */
 .formSearch button {
     background-color: var(--button);
     color: white;
@@ -59,5 +77,25 @@
     border-radius: 0.2rem;
     padding: 8px 16px;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    /* não encolher o botão */
+}
+
+/* --- Media Queries --- */
+
+/* Telas pequenas */
+@media (max-width: 480px) {
+    .formSearch {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .containerSearch {
+        width: 100%;
+    }
+
+    .formSearch button {
+        width: 100%;
+    }
 }
