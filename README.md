@@ -1,36 +1,20 @@
-# Atividade 5 - Filmes IMDB
+# 🎬 Filmes IMDB – Atividade 5 +pra TI
 
 Aplicação em React + Vite que consome a API do TMDB (ou OMDb), permitindo que usuários busquem filmes, vejam detalhes e montem uma lista de favoritos.
 
-## 🚀Funcionalidades
+Projeto criado durante o curso +praTi & Codifica Edu.
 
-### 🔎 Página de Busca
+## Funcionalidades
 
-Campo para digitar o termo de busca
+### Busca de filmes: campo para pesquisar filmes pelo nome
+### Resultados de Busca: exibição de pôster, título, nota, botão para detalhes e favoritar.
+### Paginação: navegação entre múltiplas páginas de resultados.
+### Página de Detalhes: informações completas como diretor, elenco, sinopse e avaliação.
+### Lista de Favoritos: adicionar ou remover filmes com persistência no localStorage.
+### Feedback de Estado: indicador de carregamento e mensagens de erro amigáveis.
 
-Lista de resultados com pôster, título, ano e botão para ver detalhes
 
-### 📑 Paginação
-
-Navegação entre as páginas de resultados
-
-### 🎥 Página de Detalhes
-
-Exibição de informações completas: diretor, elenco, sinopse e avaliação
-
-### ⭐ Lista de Favoritos
-
-Adicionar ou remover filmes da lista
-
-Persistência em localStorage
-
-### ⚡ Tratamento de Erros & Loading
-
-Indicador de carregamento
-
-Mensagens de erro amigáveis
-
-### 🛠️ Tecnologias Utilizadas
+### Tecnologias Utilizadas
 
 React
  + Vite
@@ -40,6 +24,57 @@ React Router
 TMDB API
  ou OMDb API
 
+CSS Modules
+
+## Estrutura do Projeto
+
+```bash
+┣ 📂public
+┃ ┗ 📜vite.svg
+┣ 📂src
+┃ ┣ 📂assets
+┃ ┃ ┗ 📜react.svg
+┃ ┣ 📂components
+┃ ┃ ┣ 📂MovieCard
+┃ ┃ ┃ ┣ 📜index.jsx
+┃ ┃ ┃ ┗ 📜MovieCard.module.css
+┃ ┃ ┗ 📂Search
+┃ ┃   ┣ 📜index.jsx
+┃ ┃   ┗ 📜Search.module.css
+┃ ┣ 📂contexts
+┃ ┃ ┣ 📜FavoritesContext.js
+┃ ┃ ┗ 📜FavoritesProvider.jsx
+┃ ┣ 📂hooks
+┃ ┃ ┗ 📜useFavorites.js
+┃ ┣ 📂layout
+┃ ┃ ┣ 📜MainLayout.jsx
+┃ ┃ ┗ 📜MainLayout.module.css
+┃ ┣ 📂pages
+┃ ┃ ┣ 📂FavoritesPage
+┃ ┃ ┃ ┣ 📜FavoritesPage.module.css
+┃ ┃ ┃ ┗ 📜index.jsx
+┃ ┃ ┣ 📂Home
+┃ ┃ ┃ ┣ 📜Home.module.css
+┃ ┃ ┃ ┗ 📜index.jsx
+┃ ┃ ┣ 📂MovieDetails
+┃ ┃ ┃ ┣ 📜index.jsx
+┃ ┃ ┃ ┗ 📜MovieDetails.module.css
+┃ ┃ ┗ 📂SearchPage
+┃ ┃   ┣ 📜index.jsx
+┃ ┃   ┗ 📜SearchPage.module.css
+┃ ┣ 📂routes
+┃ ┃ ┗ 📜AppRoutes.jsx
+┃ ┣ 📂styles
+┃ ┃ ┗ 📜globals.css
+┃ ┗ 📜main.jsx
+┣ 📜.env
+┣ 📜.gitignore
+┣ 📜eslint.config.js
+┣ 📜index.html
+┣ 📜package.json
+┣ 📜README.md
+┗ 📜vite.config.js
+```
 
 ## Como Rodar o Projeto
 
@@ -69,6 +104,7 @@ npm run dev
 ```bash
 http://localhost:5173/
 ```
-## 📸 Demonstração
+## Demonstração
 
-(adicione prints da aplicação aqui quando tiver funcionando)
+![Demonstração](./src/assets/Demo_01.PNG)
+![Demonstração](./src/assets/Demo_02.PNG)
