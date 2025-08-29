@@ -1,30 +1,40 @@
 # 🎬 Filmes IMDB – Atividade 5 +pra TI
 
-Aplicação em React + Vite que consome a API do TMDB (ou OMDb), permitindo que usuários busquem filmes, vejam detalhes e montem uma lista de favoritos.
+O MovieAPP é uma aplicação em React + Vite que consome a API do TMDB, permitindo que usuários busquem filmes, vejam detalhes e montem uma lista de favoritos.
 
 Projeto criado durante o curso +praTi & Codifica Edu.
 
-## Funcionalidades
-
-### Busca de filmes: campo para pesquisar filmes pelo nome
-### Resultados de Busca: exibição de pôster, título, nota, botão para detalhes e favoritar.
-### Paginação: navegação entre múltiplas páginas de resultados.
-### Página de Detalhes: informações completas como diretor, elenco, sinopse e avaliação.
-### Lista de Favoritos: adicionar ou remover filmes com persistência no localStorage.
-### Feedback de Estado: indicador de carregamento e mensagens de erro amigáveis.
-
-
 ### Tecnologias Utilizadas
 
-React
- + Vite
+- Vite — Ferramenta de build rápida para projetos front-end
 
-React Router
+- React — Biblioteca para construção de interfaces de usuário
 
-TMDB API
- ou OMDb API
+- CSS Modules — Técnica para escrever CSS com escopo local
 
-CSS Modules
+- Material UI — Componentes React prontos para produção
+
+- TMDB API — Fonte dos dados de filmes e séries
+
+## Funcionalidades
+
+### - Busca de filmes: 
+    campo para pesquisar filmes pelo nome
+
+### - Resultados de Busca: 
+    exibição de pôster, título, nota, botão para detalhes e favoritar.
+
+### - Paginação: 
+    navegação entre múltiplas páginas de resultados.
+
+### - Página de Detalhes: 
+    informações completas como diretor, elenco, sinopse e avaliação.
+
+### - Lista de Favoritos: 
+    adicionar ou remover filmes com persistência no localStorage.
+
+### - Feedback de Estado: 
+    indicador de carregamento e mensagens de erro amigáveis.
 
 ## Estrutura do Projeto
 
@@ -75,7 +85,6 @@ CSS Modules
 ┣ 📜README.md
 ┗ 📜vite.config.js
 ```
-
 ## Como Rodar o Projeto
 
 1. Clone este repositório:
@@ -90,17 +99,20 @@ cd atividade_05_api
 ```bash
 npm install
 ```
-4. Crie um arquivo .env na raiz com sua chave da API:
+4. Entre no site do TMDB, crie uma conta e gere uma API Key:
+```bash
+https://developer.themoviedb.org/docs/getting-started
+```
+5. Crie um arquivo .env na raiz com sua chave da API:
 ```bash
 VITE_API_KEY=sua_chave_aqui
 VITE_API_URL=https://api.themoviedb.org/3
 ```
-5. Rode o projeto:
+6. Rode o projeto:
 ```bash
 npm run dev
 ```
-
-6. Acesse no navegador:
+7. Acesse no navegador:
 ```bash
 http://localhost:5173/
 ```
